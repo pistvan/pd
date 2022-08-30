@@ -8,6 +8,7 @@ class ValidationException extends Exception {
 	protected $errors;
 
 	public function __construct(array $errors) {
+		$this->errors = $errors;
 		$message = sprintf("There are %d error(s)", count($errors));
 		parent::__construct($message, 1);
 	}
