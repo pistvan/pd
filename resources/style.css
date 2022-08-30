@@ -1,0 +1,8 @@
+.modal-dialog .modal-body .field-row {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.modal-dialog .modal-body .field-row .field-title {
+	width: 8em;
+}
