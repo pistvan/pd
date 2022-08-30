@@ -2,6 +2,7 @@
 
 namespace App\Command;
 
+use App\Epub\Validator;
 use App\Helpers\DownloadHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -31,6 +32,8 @@ class ParseCommand extends Command {
 			$output->writeln("OK");
 
 			$output->writeln("Downloaded to $file");
+
+			Validator::validateFile($file);
 		}
 
 		return 0;

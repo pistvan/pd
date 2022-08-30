@@ -22,7 +22,7 @@ class DownloadHelper {
 	static function file(string $uri): string {
 		if (is_null(self::$client)) self::init();
 
-		$file = tempnam(sys_get_temp_dir(), 'epub');
+		$file = tempnam(sys_get_temp_dir(), 'epub') . '.epub';
 
 		self::$client->get($uri, [
 			'sink' => $file,
